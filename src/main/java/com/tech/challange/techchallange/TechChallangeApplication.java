@@ -8,5 +8,6 @@ public class TechChallangeApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TechChallangeApplication.class, args);
+		
 	}
 }
