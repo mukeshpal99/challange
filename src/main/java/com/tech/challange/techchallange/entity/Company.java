@@ -26,7 +26,12 @@ public class Company {
 	@Column(name="name")
 	String name;
 	
+	@Column(name="status")
+	String status;
+	
 	// have to create one to one mapping with user entity
 	String adminUser;
+	
+	
 
 }
