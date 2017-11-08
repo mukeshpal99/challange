@@ -1,12 +1,17 @@
 package com.tech.challange.techchallange.entity;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User {
@@ -34,8 +39,15 @@ public class User {
 	@Column(name="status")
 	String status;
 	
-	//have to create one to one mapping with user company entity
-	int company_id;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="company_id")
+	Company company;
+	
+	@Column(name="company_admin")
+	boolean isCompanyAdmin;
+	
+	@OneToMany(mappedBy="user")
+	List<Event> events;
 	
 
 }

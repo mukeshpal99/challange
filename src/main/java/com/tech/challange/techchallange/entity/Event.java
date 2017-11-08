@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 public class Event {
 	
@@ -15,7 +17,15 @@ public class Event {
 	@Column(name="type")
 	String type;
 	
-	// have to map many to one mapping
-	int companyId;
+	@ManyToOne
+	@JoinColumn(name="company_id")
+	Company company;
+	
+	@ManyToOne
+	@JoinColumn(name="user_id")
+	User user;
+	
+	@Column(name="consumed")
+	boolean isConsumed;
 
 }

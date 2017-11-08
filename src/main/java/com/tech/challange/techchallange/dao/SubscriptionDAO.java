@@ -1,5 +1,5 @@
 package com.tech.challange.techchallange.dao;
 
-public class SubscriptionDAO {
+public interface SubscriptionDAO {
 
 }

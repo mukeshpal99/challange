@@ -1,5 +1,5 @@
 package com.tech.challange.techchallange.dao;
 
-public interface EventDAO {
+public class EventDAOImpl implements EventDAO{
 
 }

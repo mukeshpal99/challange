@@ -3,9 +3,12 @@ package com.tech.challange.techchallange.entity;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 public class Subscription {
 	
@@ -19,8 +22,9 @@ public class Subscription {
 	@Column(name="last_modified")
 	Date lastModified;
 	
-	//have to create many to one mapping with user company entity
-	int company_id;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="company_id")
+	Company company;
 	
 	@Column(name="status")
 	String status;
