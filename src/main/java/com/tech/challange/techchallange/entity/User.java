@@ -36,6 +36,9 @@ public class User {
 	@Column(name="email_address")
 	String email;
 	
+	@Column(name="is_admin")
+	boolean isAdmin;
+	
 	@Column(name="status")
 	String status;
 	

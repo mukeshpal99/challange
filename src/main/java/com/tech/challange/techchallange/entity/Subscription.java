@@ -22,6 +22,12 @@ public class Subscription {
 	@Column(name="last_modified")
 	Date lastModified;
 	
+	@Column(name="application")
+	String appName;
+	
+	@Column(name="edition")
+	String editionName;
+	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="company_id")
 	Company company;
