@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS `appdirect_isv`;
 CREATE DATABASE  IF NOT EXISTS `appdirect_isv`;
 
 use `appdirect_isv`;

@@ -26,7 +26,7 @@ public class Company {
 	Date createdOn;
 	
 	@Column(name="last_modified")
-	Date LastModified;
+	Date lastModified;
 	
 	@Column(name="name")
 	String name;
